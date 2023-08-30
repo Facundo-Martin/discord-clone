@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
         This is a protected route
       </p>
       <UserButton afterSignOutUrl="/" />
+      <ThemeToggle />
     </>
   );
 }
