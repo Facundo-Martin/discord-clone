@@ -1,6 +1,7 @@
 import getInitialProfile from "@/lib/getInitialProfile";
 import { prisma } from "@/lib/client";
 import { redirect } from "next/navigation";
+import CreateServerModal from "@/components/modals/CreateServer";
 
 export default async function SetupPage() {
   const profile = await getInitialProfile();
@@ -19,5 +20,5 @@ export default async function SetupPage() {
     return redirect(`/servers/${server.id}`);
   }
 
-  return <div>Create a server</div>;
+  return <CreateServerModal />;
 }
