@@ -39,8 +39,6 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
     return redirect("/");
   }
 
-  console.log("hey", serverId);
-
   const server = await prisma.server.findUnique({
     where: {
       id: serverId,
